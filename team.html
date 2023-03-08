@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134490041-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-134490041-1');
+  </script>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!-- Page Title Here -->
+  <title>KitsuneX</title>
+  <link rel="icon" href="./img/logo.svg" type="image/png" sizes="16x16">
+
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <meta name="description" content="KitsuneX">
+  <!-- Disable screen scaling-->
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <!-- Facebook Meta -->
+  <meta property="og:url" content="./">
+  <meta property="og:title" content="KitsuneX">
+  <meta property="og:description" content="KitsuneX">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./img/logo.svg">
+  <meta property="og:image:type" content="content/jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <!-- Web fonts and Web Icons -->
+  <!-- <link rel="stylesheet" href="fonts/opensans/stylesheet.css"> -->
+  <!-- <link rel="stylesheet" href="fonts/bebas/stylesheet.css"> -->
+  <link rel="stylesheet" href="fonts/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/awesome/css/all.min.css">
+
+  <!-- Vendor CSS style -->
+  <link rel="stylesheet" href="css/pageloader.css">
+
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="js/vegas/vegas.min.css">
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="css/style-default.css">
+
+  <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+
+<body class="body-page">
+  <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- BEGIN OF site header Menu -->
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- Begin of logo/brand -->
+      <a class="navbar-brand" href="#">
+        <img src="img/brand.svg" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">HOME</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link active">TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="roadmap.html">ROADMAP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lore.html">LORE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="#">Gitbook</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://www.magiceden.io/marketplace/tsuki" target="_blank">Magic Eden</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://twitter.com/KitsuneXNFT" target="_blank">Twitter</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://discord.gg/officialkitsunex" target="_blank">Discord</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-item dropdown d-none d-md-block">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          QUICK LINKS
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="https://kitsune-x-noi.gitbook.io/litepaper-v1/">
+            <img class="nav-icon" src="img/gitbook-logo.svg">
+            Litepaper</a>
+          <a class="dropdown-item" href="https://www.magiceden.io/marketplace/tsuki" target="_blank">
+            <img class="nav-icon" src="img/magiceden-logo.svg">Magic Eden</a>
+          <a class="dropdown-item" href="https://twitter.com/KitsuneXNFT" target="_blank">
+            <img class="nav-icon" src="img/twitter-logo.svg">
+            Twitter</a>
+          <a class="dropdown-item" href="https://discord.gg/officialkitsunex" target="_blank">
+            <img class="nav-icon" src="img/discord-logo.svg">
+            Discord</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End of logo/brand -->
+    <div class="progress-container">
+      <div class="progress-bar" id="scrollIndicator"></div>
+    </div>
+
+    <div class="left-side">
+      <!-- Arrows scroll down/up -->
+      <!--<footer class="section-footer scrolldown">
+        <h3>SCROLL DOWN</h3>
+
+        <a class="down"></a>
+      </footer>-->
+    </div>
+    <div class="right-side">
+      <h5>All Rights Reserved.<br />© 2022 KitsuneX, Inc.</h5>
+    </div>
+  </header>
+  <!-- END OF site header Menu-->
+
+  <!-- BEGIN OF page cover -->
+  <div class="hh-cover page-cover">
+    <!-- Cover Background -->
+    <div class="cover-bg bg-img " data-image-src="img/bg6.jpg" id="parallax"></div>
+    <!-- Particles as background - uncomment below to use particles/snow -->
+    <div id="particles-js" class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(2, 3, 10, 0)"></div>
+  </div>
+  <!--END OF page cover -->
+
+  <!-- BEGIN OF page main content -->
+  <main class="page-main page-fullpage main-anim" id="mainpage">
+    <!-- Begin of description section -->
+    <div class="section fp-auto-height-responsive" data-section="team">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper">
+        <div class="section-content">
+          <div>
+            <div class="flexx">
+            <div class="card">
+              <div class="block-head">
+                <!--<span>01M</span>
+                <span>[KITSUNEX]</span>-->
+              </div>
+              <div class="card-title" id="meet-team-title">
+                チームに会う
+              </div>
+              <div class="card-description">
+                Our team consists of developers and blockchain enthusiasts who are optimistic about the potential of the Solana ecosystem and the NFT market to transform online interactions. We are dedicated to enhancing the user experience and ensuring that our products and services are available to everyone.              </div>
+            </div>
+            <img class="kitsune-team" src="img/KITSUNE-TEAM-PSD.png">
+            </div>
+
+            <div class="team-members">
+              <div class="team-member active" style="--memberBackground:url(../img/t1.jpg);">
+                <div class="shadow"></div>
+                <div class="info">
+                  <div class="main-title">Prince</div>
+                  <div class="sub-title">Founder</div>
+                  <div class="description">
+                    With almost a decade of experience managing IRL businesses which span hospitality, to real estate,
+                    Prince is a serial entrepreneur.
+                    <br />
+                    His strengths lie in his ambition to not just succeed, but to build bigger and better. A born
+                    leader, he plays an integral role in the day to day operations of KitsuneX, as well as helping to
+                    manage the wider team.
+                    <br />
+                    Feedback is key to growth. Prince understands this, and is always looking for feedback from the
+                    community!
+                  </div>
+                </div>
+              </div>
+              <div class="team-member" style="--memberBackground:url(../img/t2.jpg);">
+                <div class="shadow"></div>
+                <div class="info">
+                  <div class="main-title">CaptainDoc</div>
+                  <div class="sub-title">Co-Founder</div>
+                  <div class="description">
+                    Coming from a more technical background, with many years experience working in database security and
+                    insurance validation, Captaindoc is a central figure in both the backend and frontend of KitsuneX.
+                    <br />
+                    His skill set lends itself to communications; managing meetings with team members, speaking on AMAs,
+                    as well as 1-2-1 with other project founders, and the community - Translating ideas and concepts so
+                    that the listener can understand them.
+                    <br />
+                    A team and community that are aligned in terms of vision and direction, is what Captaindoc is
+                    striving for.
+                  </div>
+                </div>
+              </div>
+              <div class="team-member" style="--memberBackground:url(../img/t3.jpg);">
+                <div class="shadow"></div>
+                <div class="info">
+                  <div class="main-title">Venture | CTO</div>
+                  <div class="sub-title">Full Stack Dev</div>
+                  <div class="description">
+                    Venture (Lead Back End and Blockchain engineer)  is a senior full-stack developer and blockchain engineer with 7 years of experience in web and app development. Specializing in React, Next.js, Node, and Python, they have also expanded into the world of blockchain networks, working with Solana, EVM, NEAR, and Cosmos SDK for the past 2 years. With a focus on NFT projects, they have built various features such as minting, staking, breeding, raffle/auction, marketplace, launchpad, and P2E games, including Dice, Spinner, RNGs, and Crash. As a consultant and developer, Venture prioritizes business goals and growth and strives for simple and elegant solutions to every problem. 
+                  </div>
+                </div>
+              </div>
+              <!-- cajamares -->
+              <div class="team-member" style="--memberBackground:url(../img/t4.jpg);">
+                <div class="shadow"></div>
+                <div class="info">
+                  <div class="main-title">Ravenosse & Sarasvati</div>
+                  <div class="sub-title">Main Artist & Concept Designer</div>
+                  <div class="description">
+                    Ravenosse (Lead Artist) is a professional artist who draws inspiration from manga and has been working in the field for over 3 years. His art has evolved with KitsuneX. Ravenosse's artwork is characterized by intricate details, vibrant colors, and a unique style that sets it apart. He is known for his ability to capture emotions and bring characters to life on paper.
+                    <br>
+                    <br>
+                    Sarasvati (Concept Designer), also known as SRSVT, is a concept designer who has been creating art since childhood. He graduated from Art School in 2012 and has pursued a career in the Fine Arts ever since. Alongside being a tattoo artist, he is also an illustrator and graphic designer, working with different mediums to produce his work. SRSVT values the process of creating art, emphasizing the journey over the destination.
+                  </div>
+                </div>
+              </div>
+              <div class="team-member" style="--memberBackground:url(../img/t5.jpg);">
+                <div class="shadow"></div>
+                <div class="info">
+                  <div class="main-title">Cajamares & Co</div>
+                  <div class="sub-title">Lead Front End</div>
+                  <div class="description">
+                    Cajamares & Co is a team of diverse engineers, including front-end, full-stack, AI, cloud, and data consultants with a focus on machine learning and deep learning. They specialize in using OpenCV, Tensorflow, Keras, and Pytorch to improve or create products. With experience in e-commerce, data engineering, and computer vision, they are skilled in using Linux, Git, AWS, Docker, MySQL, and Agile on a daily basis. They have excellent communication skills, are adaptable to multicultural environments and have completed successful projects worldwide.
+                  </div>
+                </div>
+              </div>
+              <div class="team-member" style="--memberBackground:url(../img/t6.jpg);">
+                <div class="shadow"></div>
+                <div class="info">
+                  <div class="main-title">Man3y</div>
+                  <div class="sub-title">Creative Assistance</div>
+                  <div class="description">
+                    Man3y is an expert in creative assistance and digital marketing, with extensive experience working with companies such as Sony. He is skilled in every stage of the digital marketing process, from strategy and development to implementation and analysis, and is knowledgeable about the latest technologies to create dynamic campaigns that reach audiences in new and exciting ways. Man3y is a leader in the digital marketing field, and is highly sought after by businesses looking to maximize their digital presence.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+  </main>
+
+  
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" rossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- All vendor scripts -->
+  <script src="js/vendor/scrolloverflow.min.js"></script>
+  <script src="js/vendor/all.js"></script>
+  <script src="js/particlejs/particles.min.js"></script>
+
+  <!-- Countdown script -->
+  <script src="js/jquery.downCount.js"></script>
+
+  <!-- Javascript main files -->
+  <script src="js/team.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="js/hacky-text.js"></script>
+
+  <!-- <script src="js/particlejs/particles-init.js"></script> -->
+
+</body>
+
+</html>
+<!-- Localized -->
