@@ -1,21 +1,363 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Todo List</title>
-    <link rel=" shortcut icon" type="image/png" href="img/favicon.png" />
-  </head>
-  <body>
-    <h1>Todo</h1>
-    <form id="form">
-      <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
+<!doctype html>
+<html class="no-js" lang="en">
 
-      <ul class="todos" id="todos"></ul>
-    </form>
-    <small>Left click to toggle completed. <br> Right click to delete todo</small>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134490041-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <script src="script.js"></script>
-  </body>
+    gtag('config', 'UA-134490041-1');
+  </script>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!-- Page Title Here -->
+  <title>KitsuneX</title>
+  <link rel="icon" href="./img/logo.svg" type="image/png" sizes="16x16">
+
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <meta name="description" content="KitsuneX">
+  <!-- Disable screen scaling-->
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <!-- Facebook Meta -->
+  <meta property="og:url" content="./">
+  <meta property="og:title" content="KitsuneX">
+  <meta property="og:description" content="KitsuneX">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./img/logo.svg">
+  <meta property="og:image:type" content="content/jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <!-- Web fonts and Web Icons -->
+  <!-- <link rel="stylesheet" href="fonts/opensans/stylesheet.css"> -->
+  <!-- <link rel="stylesheet" href="fonts/bebas/stylesheet.css"> -->
+  <link rel="stylesheet" href="fonts/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/awesome/css/all.min.css">
+
+  <!-- Vendor CSS style -->
+  <link rel="stylesheet" href="css/pageloader.css">
+
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="js/vegas/vegas.min.css">
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="css/style-default.css">
+
+  <!-- <link rel="stylesheet" href="css/wickedcss.min.css"> -->
+  <!-- https://animate.style/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+
+<body class="body-page">
+  <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- Page Loader : just comment these lines to remove it
+  <div id="loader-wrapper">
+    <video autoPlay muted id="loading-video">
+      <source src="./img/white.mp4" type="video/mp4" />
+    </video>
+  </div> -->
+
+  <!-- BEGIN OF site header Menu -->
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- Begin of logo/brand -->
+      <a class="navbar-brand" href="#">
+        <img src="img/brand.svg" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link active">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="roadmap.html">ROADMAP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lore.html">LORE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="#">Gitbook</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://www.magiceden.io/marketplace/tsuki" target="_blank">Magic Eden</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://twitter.com/KitsuneXNFT" target="_blank">Twitter</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://discord.gg/officialkitsunex" target="_blank">Discord</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-item dropdown d-none d-md-block">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          QUICK LINKS
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="https://kitsune-x-noi.gitbook.io/litepaper-v1/">
+            <img class="nav-icon" src="img/gitbook-logo.svg">
+            Litepaper</a>
+          <a class="dropdown-item" href="https://www.magiceden.io/marketplace/tsuki" target="_blank">
+            <img class="nav-icon" src="img/magiceden-logo.svg">Magic Eden</a>
+          <a class="dropdown-item" href="https://twitter.com/KitsuneXNFT" target="_blank">
+            <img class="nav-icon" src="img/twitter-logo.svg">
+            Twitter</a>
+          <a class="dropdown-item" href="https://discord.gg/officialkitsunex" target="_blank">
+            <img class="nav-icon" src="img/discord-logo.svg">
+            Discord</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End of logo/brand -->
+    <div class="progress-container">
+      <div class="progress-bar" id="scrollIndicator"></div>
+    </div>
+
+    <div class="left-side">
+      <!-- Arrows scroll down/up -->
+
+    </div>
+    <div class="right-side">
+      <h5>All Rights Reserved.<br />© 2022 KitsuneX, Inc.</h5>
+    </div>
+  </header>
+  <!-- END OF site header Menu-->
+
+  <!-- BEGIN OF page cover -->
+  <div class="hh-cover page-cover">
+    <!-- Cover Background -->
+    <div class="cover-bg bg-img " data-image-src="img/bg1.png"></div>
+    <!-- Particles as background - uncomment below to use particles/snow -->
+    <div id="particles-js" class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(2, 3, 10, 0)"></div>
+  </div>
+  <!--END OF page cover -->
+
+  <!-- BEGIN OF page main content -->
+  <main class="page-main page-fullpage main-anim" id="mainpage">
+    <!-- Begin of home section -->
+    <div class="section fp-auto-height-responsive" data-section="home">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper">
+        <div class="section-content">
+          <div class="card">
+            <div class="card-title" id="welcome-title">
+              おそた
+            </div>
+            <div class="card-description">
+              The Fox of Ninetails has been a sacred figure within Japanese folklore for centuries. Kitsune is more than
+              just a symbol; tales of ancient spirits and paranormal foxes number in the thousands. Much like you. As we
+              spin our own story, with your individual threads woven deeply into the fabric of the telling, together we
+              add to the cosmic pattern that Kitsune has cast across the expansiveness of time.
+            </div>
+          </div>
+          <!-- <img src="./img/character1.png" class="home-character1 floater" data-aos="zoom-in-up" /> -->
+          <img src="./img/character1.png" class="home-character1" data-aos="zoom-in-up" />
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of home section -->
+
+    <!-- Begin of description section -->
+    <div class="section fp-auto-height-responsive" data-section="about">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper">
+        <div class="section-content" style="--bg-url: url(../img/about.png)">
+          <div id="about-accordion" class="scrollable">
+            <div class="card active" data-toggle="collapse" data-target="#aboutCollapseOne" data-image="about.png"
+              aria-expanded="false" aria-controls="aboutCollapseOne">
+              <!-- <div class="block-head">
+                <span>02C</span>
+                <span>[manifesto.log]</span>
+              </div> -->
+              <div class="card-header" id="aboutHeadingOne">
+                <div class="title" id="about-title">きし</div>
+              </div>
+              <div id="aboutCollapseOne" class="collapse" aria-labelledby="aboutHeadingOne"
+                data-parent="#about-accordion">
+                <div class="card-body">
+                  KitsuneX is more than just an art collection; it’s a movement.
+                  <br>
+                  <br>
+                  As our community continues to grow, we can see our roots spreading throughout the ecosystem. Our
+                  mission is simple, allow users and investors to interact in Web 3 with Ease, eXponentially. To best
+                  serve the Solana NFT space, we are dedicated to building premier tools and platforms. Accessible to
+                  all, for the betterment of all.
+                  <br> 
+                  <br>
+                  Borne of Japanese folklore, we here at KitsuneX are shapeshifters. As needs change, and the meta
+                  develops, so too do we mature and shift our focus. Our ambition, dedication, and commitment to the
+                  improvement of Solana, is what drives us
+                </div>
+              </div>
+              <div class="block-foot">
+                <!--<span>//CURRENTLY VIEWING</span>-->
+                <span>+ EXPAND</span>
+              </div>
+            </div>
+            <div class="card" data-toggle="collapse" data-target="#aboutCollapseThree" data-image="mission.png"
+              aria-expanded="false" aria-controls="aboutCollapseThree">
+              <!-- <div class="block-head">
+                <span>02B</span>
+                <span>[manifesto.log]</span>
+              </div> -->
+              <div class="card-header" id="aboutHeadingThree">
+                <div class="title" id="mission-title">ミッション</div>
+              </div>
+              <div id="aboutCollapseThree" class="collapse" aria-labelledby="aboutHeadingThree"
+                data-parent="#about-accordion">
+                <div class="card-body">
+                  Slow and steady wins the race.
+                  <br>
+                  <br>
+                  We are in this for the long haul, and the betterment of all. With the tools we are creating, and the plans we have in place, we are aiming for nothing short of Bluechip. Innovation, and our community, are at the forefront of everything we do. Soon we will set the gold standard for projects in the NFT space.
+                  <br>
+                  <br>
+                  We are building a bear market proof business venture, offering tools and products which serve to improve our users ability to connect in Web 3 with Ease, eXponentially. The key to this business model are multiple streams of revenue, which will be shared sustainably with our holders.  
+                </div>
+              </div>
+              <div class="block-foot">
+                <!--<span>//CURRENTLY VIEWING</span>-->
+                <span>+ EXPAND</span>
+              </div>
+            </div>
+            <div class="card" data-toggle="collapse" data-target="#aboutCollapseTwo" data-image="vision.png"
+              aria-expanded="false" aria-controls="aboutCollapseTwo">
+              <div class="block-head">
+                <span>02A</span>
+                <span>[manifesto.log]</span>
+              </div>
+              <div class="card-header" id="aboutHeadingTwo">
+                <div class="title" id="community-title">ヴィジョン</div>
+              </div>
+              <div id="aboutCollapseTwo" class="collapse" aria-labelledby="aboutHeadingTwo"
+                data-parent="#about-accordion">
+                <div class="card-body">
+                  Our NFT collection starts and ends with you, the holder.
+                  <br>
+                  <br>
+                  Holding a Tsuki and/or KitsuneX NFT is your ticket in. Without you, the community, we are nothing. As a stakeholder in the success of KitsuneX, we value the input and feedback of our community. We aim to foster a collaborative and inclusive environment where everyone's ideas and perspectives are heard and considered. Our focus is on creating long-term value for our ecosystem, not just short-term gains. We believe that by prioritizing the needs and desires of our holders, we can build a stronger and more sustainable project. Ultimately, we are committed to delivering the best possible experience for our community, and we will continue to push ourselves to achieve this goal.
+                </div>
+              </div>
+              <div class="block-foot">
+                <!--<span>//CURRENTLY VIEWING</span>-->
+                <span>+ EXPAND</span>
+              </div>
+            </div>
+            
+          </div>
+          <div id="about-image"></div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+
+    <!-- Begin of description section -->
+    <div class="section fp-auto-height-responsive" data-section="more">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper">
+        <div class="section-content">
+          <div class="card">
+            <div class="card-title" id="trust-in-tsuki-title">
+              Trust in Tsuki
+            </div>
+            <div class="card-description">
+              $TSUKI is the key which unlocks a whole new world.
+            </div>
+            <!-- <img src="./img/lore.png" class="d-md-none" width="100%" style="margin: 25px auto;" /> -->
+            <a class="read-lore" href="lore.html">
+              READ LORE
+            </a>
+          </div>
+          <img src="./img/kitsune_team_lore.png" class="home-character3" width="100%" data-aos="zoom-out" />
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+  </main>
+
+  <!-- BEGIN OF page footer -->
+  <footer id="site-footer" class="page-footer">
+    <!-- Right content -->
+    <div class="footer-right">
+      <!-- <ul class="social">
+        <li>
+          <a href="https://www.linkedin.com/in/barack-jiang-9234031a2/" target="_blank">
+            <i class="icon fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/miracle65-dev" target="_blank">
+            <i class="icon fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/BarackJiang" target="_blank">
+            <i class="icon fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul> -->
+    </div>
+  </footer>
+  <!-- END OF site footer -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- All vendor scripts -->
+  <script src="js/vendor/scrolloverflow.min.js"></script>
+  <script src="js/vendor/all.js"></script>
+  <script src="js/particlejs/particles.min.js"></script>
+
+  <!-- Countdown script -->
+  <script src="js/jquery.downCount.js"></script>
+
+  <!-- Javascript main files -->
+  <script src="js/main.js"></script>
+  <script src="js/hacky-text.js"></script>
+
+  <!-- <script src="js/particlejs/particles-init.js"></script> -->
+
+</body>
+
 </html>
+<!-- Localized -->
